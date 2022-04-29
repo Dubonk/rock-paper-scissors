@@ -54,7 +54,7 @@ function playRound(playerSelection, computerSelection) {
         return lose;
     }
     else {
-        alert('Oops! Something went wrong.')
+        alert(`Oops! ${p} is not an option`)
     }
 }
 function game() {

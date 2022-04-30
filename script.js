@@ -27,9 +27,11 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if ( p == 'rock' && c == 'Scissors') {
-         return win && playerScore++; 
+        playerScore++; 
+        return win; 
     }
     else if ( p == 'rock' && c == 'Paper') {
+        computerScore++;
         return lose;
     }
     else if ( p == 'rock' && c == 'Rock') {
@@ -39,18 +41,22 @@ function playRound(playerSelection, computerSelection) {
         return draw;
     }
     else if ( p == 'paper' && c == 'Rock') {
+        playerScore++;
         return win;
     }
     else if (p == 'paper' && c == 'Scissors') {
+        computerScore++;
         return lose;
     }
     else if (p == 'scissors' && c == 'Scissors') {
         return draw;
     }
     else if (p == 'scissors' && c == 'Paper') {
+        playerScore++;
         return win;
     }
     else if (p == 'scissors' && c == 'Rock') {
+        computerScore++;
         return lose;
     }
     else {
@@ -58,6 +64,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 function game() {
+    playRound(playerSelection, computerSelection);
+    for (let i = 0; i > 5; i++) {
+        
+    }
 }
-
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection))
